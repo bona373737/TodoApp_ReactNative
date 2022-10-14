@@ -12,5 +12,6 @@ https://reactnative.dev/
 
 ## Third Party Packages 
 https://docs.expo.dev/versions/latest/
+- @react-native-async-storage/async-storage
 
 
