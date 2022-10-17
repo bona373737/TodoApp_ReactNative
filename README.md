@@ -10,16 +10,6 @@ Work Hard Travel Hard APP 클론
 - 버튼이벤트 
 - TextInput에서 키보드 제어방법
 
-## toDos데이터 구조 
-
-```js
-{
-    Date.now() : {text,working,completed},
-    Date.now() : {text,working,completed},
-    Date.now() : {text,working,completed},
-}
-```
-
 ## React Native Packages
 https://reactnative.dev/
 - TouchableOpacity
