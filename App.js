@@ -1,4 +1,5 @@
-import { Feather } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
@@ -102,10 +103,16 @@ export default function App() {
           {Object.keys(toDos).map((key)=>
             toDos[key].working === working? (
               <View key={key} style={styles.toDo}>
-                <Text style={styles.toDoText}>{toDos[key].text}</Text>
-                <TouchableOpacity onPress={()=>{deleteToDos(key)}}>
-                  <Feather name="x" size={26} color="red" />
-                </TouchableOpacity>
+                <Text style={styles.toDoText}>{toDos[key].text}</Text>             
+                <View style={styles.icons}>
+                  <TouchableOpacity>
+                    <AntDesign name="edit" size={24} color="black" />
+                  </TouchableOpacity>
+                  <AntDesign name="checksquareo" size={24} color="black" />
+                  <TouchableOpacity onPress={()=>{deleteToDos(key)}}>
+                    <Fontisto name="trash" size={24} color="black" />
+                  </TouchableOpacity>
+                </View>
               </View>
               ): null
             )}
@@ -153,5 +160,10 @@ const styles = StyleSheet.create({
     color:"white",
     fontSize: 16,
     fontWeight:"500",
+  },
+  icons:{
+    width:"35%",
+    flexDirection: "row",
+    justifyContent: 'space-between'
   }
 });
